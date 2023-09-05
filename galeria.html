@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+        @import url('https://fonts.googleapis.com/css2?family=Roboto');
+        @import url('https://fonts.googleapis.com/css2?family=Sofia');
+
+
+        :root {
+            /*Propiedades por defecto*/
+            --textcolor: #05081e;
+            --bgcolor: #fbfbfe;
+            --primary: #d0258e;
+            --secondary: #f7f3d4;
+            --accent: #26d96b;
+        }
+
+        * {
+            font-family: "Roboto", sans-serif;
+            color: var(--textcolor);
+
+        }
+
+        body {
+            background-color: var(--bgcolor);
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-family: 'Sofia', sans-serif;
+        }
+
+        h1>i {
+            color: var(--primary);
+
+        }
+
+        h2 {
+            background-color: var(--secondary);
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        ul li::marker {
+            content: "\f030";
+            /* FontAwesome Unicode */
+            font-family: FontAwesome;
+            color: var(--primary);
+            margin: 15px;
+
+
+        }
+
+        ul li {
+            text-decoration: underline;
+        }
+
+        ul li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        img {
+            width: 80%;
+
+            border-radius: 5px;
+        }
+
+        .galeria {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> <i class="fa fa-clipboard" aria-hidden="true"></i> Hola sofia no te los creo</h1>
+    <h2> <i class="fa fa-archive" aria-hidden="true"></i> Segundo titulo</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident reprehenderit, aperiam blanditiis rerum
+        voluptas, minus itaque excepturi voluptatibus, aspernatur voluptatem laborum? Et error hic sed ab delectus
+        laboriosam maxime totam.</p>
+    <div class="galeria">
+
+
+        <img src="img/img1.jpg" id="visor"  alt="">
+        <ul>
+            <li onclick="change(1)"> Picture 1 </li>
+            <li onclick="change(2)"> Picture 2</li>
+            <li onclick="change(3)"> Picture 3</li>
+            <li onclick="change(4)"> Picture 4</li>
+        </ul>
+    </div>
+    <script>
+        function change(id) {
+            let img= document.getElementById("visor")
+            visor.setAttribute("src", `img/img${id}.jpg`);
+            alert
+        }
+    </script>
+</body>
+
+</html>

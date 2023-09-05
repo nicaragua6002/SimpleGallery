@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operaciones</title>
+    <style>
+        
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+           
+            margin: 0 auto;
+            width: 80%;
+        }
+        .container{
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid rgb(13, 93, 117);
+            background-color: bisque;
+            box-shadow: 10px 10px 1px red;
+        }
+        .container>h1{
+            background-color: rgb(13, 93, 117);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .container input[type="number"], .container textarea, .container button {
+            width: 90%;
+            font-size: 16px;
+        }
+
+        .container button {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color:cornflowerblue;
+            color: #fff;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+        .container button:hover{
+            border: 2px solid #fff;
+            background-color: rgb(61, 94, 156);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Operaciones básicas</h1>
+        <p>Valor A: <input type="number" name="valorA" id="valorA"></p>
+        <p>Valor B: <input type="number" name="valorB" id="valorB"></p>
+        <button onclick="Operacion()">Realizar Operaciones</button>
+        <h2>Salida</h2>
+        <textarea name="" id="txtsalida" readonly cols="30" rows="10"></textarea>
+    </div>
+    <script>
+        function Operacion() {
+            let num1 = parseFloat(document.getElementById("valorA").value);
+            let num2 = parseFloat(document.getElementById("valorB").value);
+
+            let suma = num1 + num2;
+            let resta = num1 - num2;
+            let multiplicacion = num1 * num2;
+            let division = num1 / num2;
+            document.getElementById("txtsalida").innerHTML = `La suma es ${suma} \r\nLa resta es ${resta}
+            La multiplicación es ${multiplicacion} 
+            La division es ${division}`
+        }
+    </script>
+</body>
+
+</html>
